@@ -12,7 +12,20 @@ def home(request):
     return render(request,"consultas/home.html")
 
 def facebook(request):
-    return render(request,"consultas/facebook.html")
+    if request.method == 'POST':
+        form = OpcionesScrapperPublicaciones(request.POST)
+        if form.is_valid():
+            form.save()
+            pagina=form.cleaned_data.get("pagina")
+            cantidad_publicaciones=int(form.cleaned_data.get("cantidad_comentarios"))
+            messages.success(request, f'El Scrapper ha finalizado, a continuacion puede descargar el archivo')
+            h1=threading.Thread(name="hilo_publicaciones", target=fb_bot.imprimir_publicaciones, args=(pagina,cantidad_publicaciones))
+            h1.start()
+            h1.join()
+            return redirect('consultas-descargar')
+    else:
+        form = OpcionesScrapperPublicaciones()
+    return render(request,"consultas/facebook.html", {"form":form})
 
 def instagram(request):
     if request.method == 'POST':
@@ -29,22 +42,6 @@ def instagram(request):
     else:
         form = OpcionesScrapperInstagram()
     return render(request,"consultas/instagram.html", {'form': form})
-
-def publicaciones(request):
-    if request.method == 'POST':
-        form = OpcionesScrapperPublicaciones(request.POST)
-        if form.is_valid():
-            form.save()
-            pagina=form.cleaned_data.get("pagina")
-            cantidad_publicaciones=int(form.cleaned_data.get("cantidad_comentarios"))
-            messages.success(request, f'El Scrapper ha finalizado, a continuacion puede descargar el archivo')
-            h1=threading.Thread(name="hilo_publicaciones", target=fb_bot.imprimir_publicaciones, args=(pagina,cantidad_publicaciones))
-            h1.start()
-            h1.join()
-            return redirect('consultas-descargar')
-    else:
-        form = OpcionesScrapperPublicaciones()
-    return render(request, 'consultas/publicaciones.html', {'form': form})
 
 def comentarios(request):
     return HttpResponse("<h1>Scrapper de los comenarios de una publicacion de Facebook</h1>")

@@ -8,8 +8,8 @@ import json
 
 lugar="driver/chromedriver"
 url_publicaciones='https://www.facebook.com/'
-email=''
-contraseña=''
+email='jgparraga99@gmail.com'
+contraseña='testing4321'
 
 def leer_json():
     with open("xpaths_facebook.json") as mi_archivo:
@@ -116,9 +116,13 @@ def imprimir_publicaciones(pagina, cantidad_publicaciones):
         cerrar=driver.find_element(By.XPATH,Dicc_xpaths["boton_cerrar_reacciones"])
         cerrar.click()
         time.sleep(10)
-        cantidadComentarios=publicacion.find_element(By.XPATH,Dicc_xpaths["cantidad_comentarios"])
-        escribir_cantidad_comentarios=str(cantidadComentarios.text).replace("\t","").replace("\n","")
-        f.write(escribir_cantidad_comentarios + "\n")
+
+        if(verificarElemento(Dicc_xpaths["cantidad_comentarios"],publicacion)):
+            cantidadComentarios=publicacion.find_element(By.XPATH,Dicc_xpaths["cantidad_comentarios"])
+            escribir_cantidad_comentarios=str(cantidadComentarios.text).replace("\t","").replace("\n","")
+            f.write(escribir_cantidad_comentarios + "\n")
+        else:
+            f.write("null"+ "\n")
 
     f.close()
 

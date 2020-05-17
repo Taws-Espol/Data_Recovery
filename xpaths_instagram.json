@@ -10,6 +10,7 @@
   "fecha_publicacion": ".//*[@class='_1o9PC Nzb55']",
   "panel_imagenes": ".//*[@class='_2dDPU CkGkG']",
   "imagen_presente_pantalla_publicacion": ".//*[@class='FFVAD']",
+  "video_presente_pantalla_publicacion": ".//*[@class='tWeCl']",
   "boton_seguir_imagenes_publicacion": ".//*[@class='  _6CZji ']",
   "boton_seguir_publicaciones_restantes": ".//*[@class=' _65Bje  coreSpriteRightPaginationArrow']"
 }

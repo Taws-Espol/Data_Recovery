@@ -6,8 +6,8 @@ import json
 import threading
 
 lugar="driver/chromedriver"
-email=''
-contraseña=''
+email='jgparraga99@gmail.com'
+contraseña='testing4321'
 
 def leer_json():
     with open("xpaths_instagram.json") as mi_archivo:
@@ -33,7 +33,7 @@ def imprimir_informacion(url_ubicacion, cantidadDePublicaciones):
 
     iniciar=driver.find_element(By.XPATH,Dicc_xpaths["inicio_sesion"])
     iniciar.click()
-    time.sleep(20)
+    time.sleep(10)
 
     correo=driver.find_element(By.XPATH, Dicc_xpaths["email"])
     correo.send_keys(email)
@@ -41,13 +41,13 @@ def imprimir_informacion(url_ubicacion, cantidadDePublicaciones):
     contra.send_keys(contraseña)
     sesion=driver.find_element(By.XPATH, Dicc_xpaths["boton_iniciar"])
     sesion.click()
-    time.sleep(20)
+    time.sleep(10)
 
     listaPublicaciones=driver.find_elements(By.XPATH, Dicc_xpaths["publicaciones_lista"])
     publicacionInicial=listaPublicaciones[0]
     entrar=publicacionInicial.find_element(By.XPATH, Dicc_xpaths["entrar_primera_publicacion"])
     entrar.click()
-    time.sleep(20)
+    time.sleep(10)
 
     f = open("Datos de las publicaciones de la ubicacion seleccionada en Instagram.tsv", "w", encoding="utf-8")
 
@@ -64,15 +64,36 @@ def imprimir_informacion(url_ubicacion, cantidadDePublicaciones):
         f.write(escribir_fecha + "\t")
         listaImagenes=[]
         panelDeImagenes=driver.find_element(By.XPATH, Dicc_xpaths["panel_imagenes"])
-        imagen1=panelDeImagenes.find_element(By.XPATH, Dicc_xpaths["imagen_presente_pantalla_publicacion"])
-        listaImagenes.append(imagen1.get_attribute("src"))
+
+        if(verificarElemento(Dicc_xpaths["video_presente_pantalla_publicacion"],panelDeImagenes)):
+            video1=panelDeImagenes.find_element(By.XPATH,Dicc_xpaths["video_presente_pantalla_publicacion"])
+            listaImagenes.append(video1.get_attribute("src"))
+        else:
+            imagen1=panelDeImagenes.find_element(By.XPATH, Dicc_xpaths["imagen_presente_pantalla_publicacion"])
+            listaImagenes.append(imagen1.get_attribute("src"))
+
         while(verificarElemento(Dicc_xpaths["boton_seguir_imagenes_publicacion"],driver)):
             botonImagenesRestanes=driver.find_element(By.XPATH, Dicc_xpaths["boton_seguir_imagenes_publicacion"])
             botonImagenesRestanes.click()
-            time.sleep(20)
+            time.sleep(10)
+
             tupla_de_2_imagenes = panelDeImagenes.find_elements(By.XPATH, Dicc_xpaths["imagen_presente_pantalla_publicacion"])
-            imagenX = tupla_de_2_imagenes[1]
-            listaImagenes.append(imagenX.get_attribute("src"))
+            srcImagenes=[]
+            if(len(tupla_de_2_imagenes)>0):
+                for imag in tupla_de_2_imagenes:
+                    srcImagenes.append(imag.get_attribute("src"))
+
+            tupla_de_2_videos = panelDeImagenes.find_elements(By.XPATH,Dicc_xpaths["video_presente_pantalla_publicacion"])
+            srcVideos=[]
+            if(len(tupla_de_2_videos)>0):
+                for vide in tupla_de_2_videos:
+                    srcVideos.append((vide.get_attribute("src")))
+
+            tupla_combinada=srcImagenes+srcVideos
+            for elemento in tupla_combinada:
+                if (elemento not in listaImagenes):
+                    listaImagenes.append(elemento)
+
         for imgURL in listaImagenes:
             escribir_imgURL=str(imgURL).replace("\t","").replace("\n","")
             if (imgURL != listaImagenes[len(listaImagenes) - 1]):
@@ -81,6 +102,6 @@ def imprimir_informacion(url_ubicacion, cantidadDePublicaciones):
                 f.write(escribir_imgURL + "\n")
         botonPublicacionesSiguientes=driver.find_element(By.XPATH, Dicc_xpaths["boton_seguir_publicaciones_restantes"])
         botonPublicacionesSiguientes.click()
-        time.sleep(20)
+        time.sleep(10)
 
     f.close()

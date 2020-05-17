@@ -1,13 +1,20 @@
 {% extends "consultas/base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 {% block content1 %}
     <link rel="stylesheet" href="{% static 'consultas/StylerCuar.css' %}">
 {% endblock content1 %}
 {% block content2 %}
     <div class="options">
         <div>
-            <h3>Obtener Publicaciones</h3>
-            <a href="#" class="btn">Extraer</a>
+            <form method="POST">
+                {% csrf_token %}
+                <h3>Obtener publicaciones</h3>
+                {{ form|crispy }}
+                <div class="form-group">
+                    <button class="btn btn-outline-info" type="submit">Iniciar Scrapper</button>
+                </div>
+            </form>
         </div>
         <div>
             <h3>Obtener comentarios y reacciones</h3>
