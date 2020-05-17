@@ -1,0 +1,15 @@
+{
+  "inicio_sesion": ".//*[@class='tdiEy']/button",
+  "email": ".//*[@name='username']",
+  "password": ".//*[@name='password']",
+  "boton_iniciar": ".//*[@class='sqdOP  L3NKy   y3zKF     ']",
+  "publicaciones_lista": ".//*[@class='v1Nh3 kIKUG  _bz0w']",
+  "entrar_primera_publicacion": ".//*[@class='_9AhH0']",
+  "usuario_publicacion": ".//*[@class='e1e1d']/a",
+  "encabezado_publicacion": ".//*[@class='C4VMK']/span",
+  "fecha_publicacion": ".//*[@class='_1o9PC Nzb55']",
+  "panel_imagenes": ".//*[@class='_2dDPU CkGkG']",
+  "imagen_presente_pantalla_publicacion": ".//*[@class='FFVAD']",
+  "boton_seguir_imagenes_publicacion": ".//*[@class='  _6CZji ']",
+  "boton_seguir_publicaciones_restantes": ".//*[@class=' _65Bje  coreSpriteRightPaginationArrow']"
+}

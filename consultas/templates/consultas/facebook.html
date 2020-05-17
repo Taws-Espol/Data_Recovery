@@ -1,0 +1,18 @@
+{% extends "consultas/base.html" %}
+{% load static %}
+{% block content1 %}
+    <link rel="stylesheet" href="{% static 'consultas/StylerCuar.css' %}">
+{% endblock content1 %}
+{% block content2 %}
+    <div class="options">
+        <div>
+            <h3>Obtener Publicaciones</h3>
+            <a href="#" class="btn">Extraer</a>
+        </div>
+        <div>
+            <h3>Obtener comentarios y reacciones</h3>
+            <input type="text" size="45"  class="caja" placeholder="Link de la publicacion" name="link_p">
+            <a href="#" class="btn">Extraer</a>
+        </div>
+    </div>
+{% endblock content2 %}

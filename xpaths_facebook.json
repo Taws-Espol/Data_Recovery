@@ -1,0 +1,20 @@
+{
+    "email": ".//*[@id='email']",
+    "password": ".//*[@id='pass']",
+    "boton_login": ".//*[@id='loginbutton']",
+    "buscador": ".//*[@data-testid='search_input']",
+    "lupa": "//*[@data-testid='facebar_search_button']",
+    "pagina_publicaciones": ".//*[@data-key='tab_posts']",
+    "publicaciones_lista": ".//*[@class='_4-u2 _4-u8']",
+    "contenido_publicacion": ".//*[@data-testid='post_message']/p",
+    "fecha_publicacion": ".//*[@class='_5ptz timestamp livetimestamp']",
+    "boton_reacciones": ".//*[@data-testid='UFI2ReactionsCount/root']",
+    "reacciones": ".//*[@class='_ds- _45hc']/a/span/span",
+    "boton_cerrar_reacciones": ".//*[@data-testid='reactions_profile_browser:close']",
+    "cantidad_comentarios": ".//*[@class='_3hg- _42ft']",
+    "boton_ahora_no": ".//*[@id='expanding_cta_close_button']",
+    "abrir_menu": ".//*[@class='_21q1 _p']",
+    "lista_tipos_comentarios": ".//*[@class='_1ojr']",
+    "boton_ver_mas": ".//*[@class=' _4ssp']",
+    "comentarios_lista": ".//*[@dir='ltr']/span/span"
+}

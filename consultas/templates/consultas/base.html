@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Recovery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    {% block content1 %}{% endblock %}
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-main">
+            <img src="{% static 'consultas/logo.png' %}" alt="logo" class="nav-brand">
+            <ul class="nav-menu">
+                <li>
+                    <a href="{% url 'consultas-home' %}">Inicio</a>
+                </li>
+                <li>
+                    <a href="ac">Opciones</a>
+                </li>
+                <li>
+                    <a href="ac">Contacto</a>
+                </li>
+                <li>
+                    <a href="ac">Información</a>
+                </li>
+            </ul>
+            <ul class="nav-menu-right">
+                <li>
+                    <a href="@">
+                        <i class="fas fa-cog"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="@">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="@">
+                        <i class="fas fa-question"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        {% block content2 %}{% endblock %}
+       <div class="footer-links">
+        <div class="footer-desciption">
+            <h3>Información</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde consequuntur necessitatibus eum id, expedita beatae.</p>
+        </div>
+        <div class="footer-container">
+            <ul>
+                <li>
+                    <a href="#">
+                        <h3>Settings</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Settings</a>
+                </li>
+                <li>
+                    <a href="#">Settings</a>
+                </li>
+                <li>
+                    <a href="#">Settings</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer class="footer">
+        <h3>Proyecto Pre-Taws</h3>
+    </footer>
+
+        <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
