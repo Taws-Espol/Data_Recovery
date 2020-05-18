@@ -10,16 +10,21 @@
             <form method="POST">
                 {% csrf_token %}
                 <h3>Obtener publicaciones</h3>
-                {{ form|crispy }}
+                {{ form_pu|crispy }}
                 <div class="form-group">
                     <button class="btn btn-outline-info" type="submit">Iniciar Scrapper</button>
                 </div>
             </form>
         </div>
         <div>
-            <h3>Obtener comentarios y reacciones</h3>
-            <input type="text" size="45"  class="caja" placeholder="Link de la publicacion" name="link_p">
-            <a href="#" class="btn">Extraer</a>
+            <form method="POST">
+                {% csrf_token %}
+                <h3>Obtener comentarios</h3>
+                {{ form_co|crispy }}
+                <div class="form-group">
+                    <button class="btn btn-outline-info" type="submit">Iniciar Scrapper</button>
+                </div>
+            </form>
         </div>
     </div>
 {% endblock content2 %}

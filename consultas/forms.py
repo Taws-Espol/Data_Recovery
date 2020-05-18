@@ -1,5 +1,5 @@
 from django import forms
-from .models import ScrapperPublicaciones, ScrapperInstagram
+from .models import ScrapperPublicaciones, ScrapperInstagram, ScrapperComentarios
 
 class OpcionesScrapperPublicaciones(forms.ModelForm):
     class Meta:
@@ -10,3 +10,8 @@ class OpcionesScrapperInstagram(forms.ModelForm):
     class Meta:
         model= ScrapperInstagram
         fields=["url_ubicacion","cantidad_publicaciones"]
+
+class OpcionesScrapperComentarios(forms.ModelForm):
+    class Meta:
+        model=ScrapperComentarios
+        fields=["url_publicacion","tipo_comentario"]

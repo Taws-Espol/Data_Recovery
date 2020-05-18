@@ -9,3 +9,7 @@ class ScrapperPublicaciones(models.Model):
 class ScrapperInstagram(models.Model):
     url_ubicacion=models.CharField(max_length=100)
     cantidad_publicaciones=models.CharField(max_length=100)
+
+class ScrapperComentarios(models.Model):
+    url_publicacion=models.CharField(max_length=100)
+    tipo_comentario=models.CharField(max_length=100)

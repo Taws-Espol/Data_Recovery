@@ -3,7 +3,6 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 import time
 import json
-import threading
 
 lugar="driver/chromedriver"
 email='jgparraga99@gmail.com'
