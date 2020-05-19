@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8954ad25-eaec-4b75-9573-354f560bc4fc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pagina_web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pagina_web.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consultas/static/consultas/StylePrim.css" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/static/consultas/StylePrim.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consultas/static/consultas/StyleQuin.css" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/static/consultas/StyleQuin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consultas/static/consultas/StyleSeg.css" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/static/consultas/StyleSeg.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consultas/static/consultas/StyleTer.css" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/static/consultas/StyleTer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consultas/static/consultas/StylerCuar.css" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/static/consultas/StylerCuar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consultas/templates/consultas/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/templates/consultas/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
