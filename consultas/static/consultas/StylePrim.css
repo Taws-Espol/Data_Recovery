@@ -163,12 +163,12 @@ hr{
 
 /* Social */
 .social{
-    margin: 100px;
+    margin: 30px;
 }
 
 .social p{
     text-align: center;
-    font-size: 90px;
+    font-size: 30px;
     margin-bottom: 20px;
 }
 
@@ -183,7 +183,7 @@ hr{
 }
 
 .links a i{
-    font-size: 6rem;
+    font-size: 2rem;
 }
 
 /* Footer */
