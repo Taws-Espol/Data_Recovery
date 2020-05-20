@@ -94,34 +94,49 @@ def imprimir_publicaciones(pagina, cantidad_publicaciones):
             fecha="null"
         escribir_fecha=str(fecha).replace("\t","").replace("\n","")
         f.write(escribir_fecha+ "\t")
-        botonReacciones=publicacion.find_element(By.XPATH, Dicc_xpaths["boton_reacciones"])
-        botonReacciones.click()
-        time.sleep(10)
-        Reacciones=driver.find_elements(By.XPATH, Dicc_xpaths["reacciones"])
-        listaReaccionesParaEscribir=[]
-        for reaccion in Reacciones:
-            Diferente=reaccion.get_attribute("aria-label")
-            escribir_diferente=str(Diferente).replace("\t","").replace("\n","")
-            listaReaccionesParaEscribir.append(escribir_diferente)
+        if (verificarElemento(Dicc_xpaths["boton_reacciones"], publicacion)):
+            botonReacciones=publicacion.find_element(By.XPATH, Dicc_xpaths["boton_reacciones"])
+            botonReacciones.click()
+            time.sleep(10)
+            Reacciones=driver.find_elements(By.XPATH, Dicc_xpaths["reacciones"])
+            listaReaccionesParaEscribir=[]
+            if(len(Reacciones)>0):
+                for reaccion in Reacciones:
+                    Diferente=reaccion.get_attribute("aria-label")
+                    escribir_diferente=str(Diferente).replace("\t","").replace("\n","")
+                    listaReaccionesParaEscribir.append(escribir_diferente)
+            else:
+                reaccion_unica=driver.find_element(By.XPATH, Dicc_xpaths["reaccion_unica"])
+                Diferente = reaccion_unica.get_attribute("aria-label")
+                escribir_diferente = str(Diferente).replace("\t", "").replace("\n", "")
+                listaReaccionesParaEscribir.append(escribir_diferente)
 
-        f.write(verificarReaccion(listaReaccionesParaEscribir, "Me gusta")+"\t")
-        f.write(verificarReaccion(listaReaccionesParaEscribir, "Me encanta") + "\t")
-        f.write(verificarReaccion(listaReaccionesParaEscribir, "Me importa") + "\t")
-        f.write(verificarReaccion(listaReaccionesParaEscribir, "Me divierte") + "\t")
-        f.write(verificarReaccion(listaReaccionesParaEscribir, "Me asombra") + "\t")
-        f.write(verificarReaccion(listaReaccionesParaEscribir, "Me entristece") + "\t")
-        f.write(verificarReaccion(listaReaccionesParaEscribir, "Me enoja") + "\t")
+            f.write(verificarReaccion(listaReaccionesParaEscribir, "Me gusta")+"\t")
+            f.write(verificarReaccion(listaReaccionesParaEscribir, "Me encanta") + "\t")
+            f.write(verificarReaccion(listaReaccionesParaEscribir, "Me importa") + "\t")
+            f.write(verificarReaccion(listaReaccionesParaEscribir, "Me divierte") + "\t")
+            f.write(verificarReaccion(listaReaccionesParaEscribir, "Me asombra") + "\t")
+            f.write(verificarReaccion(listaReaccionesParaEscribir, "Me entristece") + "\t")
+            f.write(verificarReaccion(listaReaccionesParaEscribir, "Me enoja") + "\t")
 
-        cerrar=driver.find_element(By.XPATH,Dicc_xpaths["boton_cerrar_reacciones"])
-        cerrar.click()
-        time.sleep(10)
+            cerrar=driver.find_element(By.XPATH,Dicc_xpaths["boton_cerrar_reacciones"])
+            cerrar.click()
+            time.sleep(10)
+        else:
+            f.write("0" + "\t")
+            f.write("0" + "\t")
+            f.write("0" + "\t")
+            f.write("0" + "\t")
+            f.write("0" + "\t")
+            f.write("0" + "\t")
+            f.write("0" + "\t")
 
         if(verificarElemento(Dicc_xpaths["cantidad_comentarios"],publicacion)):
             cantidadComentarios=publicacion.find_element(By.XPATH,Dicc_xpaths["cantidad_comentarios"])
             escribir_cantidad_comentarios=str(cantidadComentarios.text).replace("\t","").replace("\n","")
             f.write(escribir_cantidad_comentarios + "\n")
         else:
-            f.write("null"+ "\n")
+            f.write("0 comentarios"+ "\n")
 
     f.close()
 

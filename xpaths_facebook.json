@@ -10,6 +10,7 @@
     "fecha_publicacion": ".//*[@class='_5ptz timestamp livetimestamp']",
     "boton_reacciones": ".//*[@data-testid='UFI2ReactionsCount/root']",
     "reacciones": ".//*[@class='_ds- _45hc']/a/span/span",
+    "reaccion_unica": ".//*[@class='_ds- _45hc _1hqh']/a/span/span",
     "boton_cerrar_reacciones": ".//*[@data-testid='reactions_profile_browser:close']",
     "cantidad_comentarios": ".//*[@class='_3hg- _42ft']",
     "boton_ahora_no": ".//*[@id='expanding_cta_close_button']",
