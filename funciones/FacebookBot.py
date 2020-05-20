@@ -80,7 +80,7 @@ def imprimir_publicaciones(pagina, cantidad_publicaciones):
 
     driver.execute_script("window.scrollBy(0,-document.body.scrollHeight)")
 
-    f = open("Datos de las publicacones Facebook.tsv", "w", encoding="utf-8")
+    f = open("consultas/static/archivos/Facebook_Publicaciones.tsv", "w", encoding="utf-8")
 
     time.sleep(10)
     for publicacion in listaFinalPublicaciones:
@@ -165,7 +165,7 @@ def imprimir_comentarios(url_comentario, tipo_comentarios):
 
     comentariosLista = driver.find_elements(By.XPATH, Dicc_xpaths["comentarios_lista"])
 
-    f = open("Comentarios de la publicacion de Facebook.tsv", "w", encoding="utf-8")
+    f = open("consultas/static/archivos/Facebook_Comentarios.tsv", "w", encoding="utf-8")
 
     for comentario in comentariosLista:
         escribir_comentario=str(comentario.text).replace("\t","").replace("\n","")

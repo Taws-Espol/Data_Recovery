@@ -5,8 +5,8 @@
 {% endblock content1 %}
 {% block content2 %}
      <header class="showcase">
-            <h2>Su archivo ha sido procesado con Éxito</h2>
-            <img src="{% static 'consultas/doc.png' %}" alt="documento" class="nav-brand">
-            <a href="#" class="btn">Descargar</a>
+         <h2>Su archivo ha sido procesado con Éxito</h2>
+         <img src="{% static 'consultas/doc.png' %}" alt="documento" class="nav-brand">
+         <a href="{% static ruta %}" class="btn" download>Descargar</a>
      </header>
 {% endblock content2 %}

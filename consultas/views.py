@@ -22,7 +22,7 @@ def facebook(request):
             h1=threading.Thread(name="hilo_publicaciones", target=fb_bot.imprimir_publicaciones, args=(pagina,cantidad_publicaciones))
             h1.start()
             h1.join()
-            return redirect('consultas-descargar')
+            return render(request,'consultas/descargar.html',{"ruta":"archivos/Facebook_Publicaciones.tsv"})
 
         form_co = OpcionesScrapperComentarios(request.POST)
         if form_co.is_valid():
@@ -33,7 +33,7 @@ def facebook(request):
             h3 = threading.Thread(name="hilo_comentarios", target=fb_bot.imprimir_comentarios,args=(url_publicacion, tipo_comentario))
             h3.start()
             h3.join()
-            return redirect('consultas-descargar')
+            return render(request,'consultas/descargar.html',{"ruta":"archivos/Facebook_Comentarios.tsv"})
     else:
         form_pu = OpcionesScrapperPublicaciones()
         form_co = OpcionesScrapperComentarios()
@@ -51,13 +51,11 @@ def instagram(request):
             h2=threading.Thread(name="hilo_instagram", target=ig_bot.imprimir_informacion, args=(url_ubicacion,cantidad_publicaciones))
             h2.start()
             h2.join()
-            return redirect('consultas-descargar')
+            return render(request,'consultas/descargar.html',{"ruta":"archivos/Instagram.tsv"})
     else:
         form = OpcionesScrapperInstagram()
     return render(request,"consultas/instagram.html", {'form': form})
 
-def descargar(request):
-    return render(request,"consultas/descargar.html")
 
 
 

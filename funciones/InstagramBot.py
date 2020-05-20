@@ -48,7 +48,7 @@ def imprimir_informacion(url_ubicacion, cantidadDePublicaciones):
     entrar.click()
     time.sleep(10)
 
-    f = open("Datos de las publicaciones de la ubicacion seleccionada en Instagram.tsv", "w", encoding="utf-8")
+    f = open("consultas/static/archivos/Instagram.tsv", "w", encoding="utf-8")
 
     for numeroPublicacion in range(cantidadDePublicaciones):
         usuario=driver.find_element(By.XPATH, Dicc_xpaths["usuario_publicacion"])
