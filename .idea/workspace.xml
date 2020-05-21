@@ -19,25 +19,25 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8954ad25-eaec-4b75-9573-354f560bc4fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/consultas/static/consultas/StyleBase.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pagina_web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pagina_web.iml" afterDir="false" />
+    <list default="true" id="9dfb94be-4f7a-45d1-b3c1-c6bbeb67272c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/consultas/templates/consultas/contactos.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consultas/templates/consultas/informacion.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultas/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultas/static/consultas/StylePrim.css" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/static/consultas/StylePrim.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultas/static/consultas/StyleQuin.css" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/static/consultas/StyleQuin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultas/static/consultas/StyleSeg.css" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/static/consultas/StyleSeg.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultas/static/consultas/StyleTer.css" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/static/consultas/StyleTer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultas/static/consultas/StylerCuar.css" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/static/consultas/StylerCuar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consultas/templates/consultas/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/templates/consultas/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultas/templates/consultas/instagram.html" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/templates/consultas/instagram.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consultas/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consultas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,6 +49,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../django_proyecto" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />

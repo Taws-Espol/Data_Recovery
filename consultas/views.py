@@ -11,6 +11,12 @@ import threading
 def home(request):
     return render(request,"consultas/home.html")
 
+def contactos(request):
+    return render(request,"consultas/contactos.html")
+
+def informacion(request):
+    return render(request,"consultas/informacion.html")
+
 def facebook(request):
     if request.method == 'POST':
         form_pu = OpcionesScrapperPublicaciones(request.POST)
