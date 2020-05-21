@@ -1,0 +1,23 @@
+{% extends "consultas/base.html" %}
+{% load static %}
+{% block content1 %}
+    <link rel="stylesheet" href="{% static 'consultas/StyleInfo.css' %}">
+{% endblock content1 %}
+{% block content2 %}
+    <header class="showcase">
+        <h2>ELIGE TU RED SOCIAL</h2>
+        <p>Recopila información sobre tus publicaciones favoritas y usalas como quieras.</p>
+    </header>
+    <div class="cards">
+        <div class="face">
+            <img src="{% static 'consultas/Facebook.png' %}" alt="">
+            <h3>Publicaciones, comentarios y reacciones.</h3>
+            <a href="{% url 'consultas-facebook' %}" class="btn">Ver más<i class="fas fa-angle-double-right"></i></a>
+        </div>
+        <div class="insta">
+            <img src="{% static 'consultas/Instagram.jpg' %}" alt="">
+            <h3>Tendencias y Publicaciones.</h3>
+            <a href="{% url 'consultas-instagram' %}" class="btn">Ver más<i class="fas fa-angle-double-right"></i></a>
+        </div>
+    </div>
+{% endblock content2 %}
