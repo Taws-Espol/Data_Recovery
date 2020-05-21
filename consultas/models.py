@@ -11,5 +11,13 @@ class ScrapperInstagram(models.Model):
     cantidad_publicaciones=models.CharField(max_length=100)
 
 class ScrapperComentarios(models.Model):
+    RELEVANTES = 'MRL'
+    RECIENTES = 'MRC'
+    TODOS = 'TD'
+    TIPOS_DE_COMENTARIOS = [
+        (RELEVANTES, 'Más relevantes'),
+        (RECIENTES, 'Más recientes'),
+        (TODOS, 'Todos los comentarios'),
+    ]
     url_publicacion=models.CharField(max_length=100)
-    tipo_comentario=models.CharField(max_length=100)
+    tipo_comentario=models.CharField(max_length=3,choices=TIPOS_DE_COMENTARIOS,default=RELEVANTES)

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Recovery</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'consultas/StyleBase.css' %}">
     {% block content1 %}{% endblock %}
 </head>
 <body>
@@ -18,9 +18,6 @@
                     <a href="{% url 'consultas-home' %}">Inicio</a>
                 </li>
                 <li>
-                    <a href="ac">Opciones</a>
-                </li>
-                <li>
                     <a href="ac">Contacto</a>
                 </li>
                 <li>
@@ -28,16 +25,6 @@
                 </li>
             </ul>
             <ul class="nav-menu-right">
-                <li>
-                    <a href="@">
-                        <i class="fas fa-cog"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="@">
-                        <i class="far fa-envelope"></i>
-                    </a>
-                </li>
                 <li>
                     <a href="@">
                         <i class="fas fa-question"></i>
@@ -56,26 +43,23 @@
        <div class="footer-links">
         <div class="footer-desciption">
             <h3>Información</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde consequuntur necessitatibus eum id, expedita beatae.</p>
+            <p>En esta página prodrás realizar un scraping de publicaciones en las redes sociales ás populares,
+                obteniendo un archivo descargable, el cual podrás manejar a tu conveniencia.</p>
         </div>
-        <div class="footer-container">
-            <ul>
-                <li>
-                    <a href="#">
-                        <h3>Settings</h3>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">Settings</a>
-                </li>
-                <li>
-                    <a href="#">Settings</a>
-                </li>
-                <li>
-                    <a href="#">Settings</a>
-                </li>
-            </ul>
-        </div>
+         <section class="social">
+            <p>Follow Us</p>
+            <div class="links">
+                <a href="https://www.facebook.com/tawsespol/">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/TawsEspol?s=09">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com/taws_espol?igshid=1wv116oxoyphl">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </section>
     </div>
     <footer class="footer">
         <h3>Proyecto Pre-Taws</h3>
