@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #000000;
+    color: #ffffff;
+    background-image: url(./background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+/* NAVIGATION STYLE*/
+.nav-main{
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 20px 0;
+    background-color: #ffffff;
+    opacity: 75%;
+}
+
+.nav-brand{
+    width: 80px;
+    margin-top: 50px;
+}
+
+.nav-main ul{
+    display: flex;
+}
+
+.nav-main ul.nav-menu li{
+    padding: 100px;
+}
+
+.nav-main ul.nav-menu-right li{
+    padding: 15px;
+}
+
+
+.nav-main ul.nav-menu{
+    flex: 1;
+    margin-left: 300px;
+}
+
+.nav-main ul.nav-menu li a{
+    text-decoration: none;
+    color: #2E2E2E;
+    font-size: 22px;
+    font-family: "Mystery Quest";
+    font-weight: bold;
+}
+
+.nav-main ul.nav-menu-right li a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+.nav-main ul.nav-menu li a:hover{
+    border-bottom: 2px solid #262626;
+}
+
+/* Social */
+.social{
+    margin: 30px;
+}
+
+.social p{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links a{
+    margin: 0 30px;
+}
+
+.links a i{
+    font-size: 3rem;
+    display: block;
+    padding: 0 10px;
+    background: tranparent;
+    color: #ffffff;
+    line-height: 50px;
+    font-size: 36px;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.2);
+    transition: .2s;
+}
+
+.links a i:hover{
+    transform: translateY(-3px) scale(1.5);
+}
+
+/* Footer */
+
+.footer-links{
+    background: rgba(131, 185, 232, 0.7);
+    color: #616161;
+    font-size: 12px;
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    height: 180px;
+}
+
+.footer-desciption{
+    color:#ffffff;
+    width: 70%;
+    margin:auto;
+
+}
+
+.footer-desciption h3{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+
+}
+
+.footer{
+    background: #799AE9;
+    color: #424242;
+    font-size: 15px;
+    padding: 20px 0;
+    text-align: center;
+    padding-bottom: 20px;
+    width: 100%;
+    height: 10px;
+}
