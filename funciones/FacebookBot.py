@@ -7,8 +7,8 @@ import json
 
 lugar="driver/chromedriver"
 url_publicaciones='https://www.facebook.com/'
-email='jgparraga99@gmail.com'
-contraseña='testing4321'
+email=''
+contraseña=''
 
 def leer_json():
     with open("xpaths_facebook.json") as mi_archivo:

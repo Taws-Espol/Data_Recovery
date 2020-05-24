@@ -6,7 +6,7 @@ import json
 
 lugar="driver/chromedriver"
 email='jgparraga99@gmail.com'
-contraseña='testing4321'
+contraseña='probando12345'
 
 def leer_json():
     with open("xpaths_instagram.json") as mi_archivo:
