@@ -6,7 +6,7 @@
 {% endblock content1 %}
 {% block content2 %}
     <div class="options">
-        <div>
+        <div class="publicacion">
             <form method="POST">
                 {% csrf_token %}
                 <h3>Obtener publicaciones</h3>
@@ -16,7 +16,7 @@
                 </div>
             </form>
         </div>
-        <div>
+        <div class="comentarios">
             <form method="POST">
                 {% csrf_token %}
                 <h3>Obtener comentarios</h3>

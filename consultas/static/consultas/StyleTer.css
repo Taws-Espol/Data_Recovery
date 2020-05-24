@@ -62,7 +62,6 @@
     padding: 5%;
 }
 
-
 .caja{
     font-family: sans-serif;
     font-size: 18px;
@@ -76,7 +75,7 @@
     font-size: 30px;
     font-family: 'Domine', serif;
     margin: 20px auto;
-
+    font-weight: bold;
 }
 
 .form-group{
