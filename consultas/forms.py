@@ -4,7 +4,7 @@ from .models import ScrapperPublicaciones, ScrapperInstagram, ScrapperComentario
 class OpcionesScrapperPublicaciones(forms.ModelForm):
     class Meta:
         model = ScrapperPublicaciones
-        fields = ['pagina','cantidad_comentarios']
+        fields = ['pagina','cantidad_publicaciones']
 
 class OpcionesScrapperInstagram(forms.ModelForm):
     class Meta:

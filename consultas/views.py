@@ -23,7 +23,7 @@ def facebook(request):
         if form_pu.is_valid():
             form_pu.save()
             pagina=form_pu.cleaned_data.get("pagina")
-            cantidad_publicaciones=int(form_pu.cleaned_data.get("cantidad_comentarios"))
+            cantidad_publicaciones=int(form_pu.cleaned_data.get("cantidad_publicaciones"))
             messages.success(request, f'El Scrapper ha finalizado, a continuacion puede descargar el archivo')
             h1=threading.Thread(name="hilo_publicaciones", target=fb_bot.imprimir_publicaciones, args=(pagina,cantidad_publicaciones))
             h1.start()
