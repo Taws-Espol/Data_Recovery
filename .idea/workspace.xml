@@ -20,18 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9dfb94be-4f7a-45d1-b3c1-c6bbeb67272c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pagina_web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pagina_web.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultas/static/consultas/StyleBase.css" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/static/consultas/StyleBase.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultas/static/consultas/StyleTer.css" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/static/consultas/StyleTer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultas/static/consultas/StylerCuar.css" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/static/consultas/StylerCuar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultas/templates/consultas/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/templates/consultas/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultas/templates/consultas/facebook.html" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/templates/consultas/facebook.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultas/templates/consultas/instagram.html" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/templates/consultas/instagram.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultas/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/funciones/FacebookBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/funciones/FacebookBot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpaths_facebook.json" beforeDir="false" afterPath="$PROJECT_DIR$/xpaths_facebook.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +50,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../django_proyecto" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -160,12 +152,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="442" y="167" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589571740966">

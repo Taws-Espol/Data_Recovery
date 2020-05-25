@@ -7,8 +7,8 @@ import json
 
 lugar="driver/chromedriver"
 url_publicaciones='https://www.facebook.com/'
-email='laurasoriano604@gmail.com'
-contraseña='2422381sof-'
+email=''
+contraseña=''
 
 def leer_json():
     with open("xpaths_facebook.json") as mi_archivo:
@@ -160,25 +160,27 @@ def imprimir_comentarios(url_comentario, tipo_comentarios):
     boton.click()
     time.sleep(30)
 
+    pantalla_actual=driver.find_element(By.XPATH, Dicc_xpaths["pantalla_actual"])
+
     if(tipo_comentarios!="Más relevantes"):
-        abrirMenu=driver.find_element(By.XPATH, Dicc_xpaths["abrir_menu"])
+        abrirMenu=pantalla_actual.find_element(By.XPATH, Dicc_xpaths["abrir_menu"])
         abrirMenu.click()
         time.sleep(10)
-        listaDeTipos = driver.find_elements(By.XPATH, Dicc_xpaths["lista_tipos_comentarios"])
+        listaDeTipos = pantalla_actual.find_elements(By.XPATH, Dicc_xpaths["lista_tipos_comentarios"])
+        encontrado=True
         for tipo in listaDeTipos:
-            if str(tipo.text)==tipo_comentarios:
-                tipo.click()
+            if(encontrado):
+                if str(tipo.text)==tipo_comentarios:
+                    tipo.click()
+                    encontrado=False
         time.sleep(10)
 
-    while (verificarElemento(Dicc_xpaths["boton_ver_mas"], driver)):
-        verMas=driver.find_element(By.XPATH, Dicc_xpaths["boton_ver_mas"])
-        #SCROLLER_DE_COMENTARIOS
-        driver.execute_script('document.getElementById("u_13_1").scrollTop+=5000')
-        #FIN
+    while (verificarElemento(Dicc_xpaths["boton_ver_mas"], pantalla_actual)):
+        verMas = pantalla_actual.find_element(By.XPATH, Dicc_xpaths["boton_ver_mas"])
         verMas.click()
         time.sleep(10)
 
-    comentariosLista = driver.find_elements(By.XPATH, Dicc_xpaths["comentarios_lista"])
+    comentariosLista = pantalla_actual.find_elements(By.XPATH, Dicc_xpaths["comentarios_lista"])
 
     f = open("consultas/static/archivos/Facebook_Comentarios.tsv", "w", encoding="utf-8")
 

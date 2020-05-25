@@ -14,6 +14,7 @@
     "boton_cerrar_reacciones": ".//*[@data-testid='reactions_profile_browser:close']",
     "cantidad_comentarios": ".//*[@class='_3hg- _42ft']",
     "boton_ahora_no": ".//*[@id='expanding_cta_close_button']",
+    "pantalla_actual": ".//*[@class='_n9']",
     "abrir_menu": ".//*[@class='_21q1 _p']",
     "lista_tipos_comentarios": ".//*[@class='_1ojr']",
     "boton_ver_mas": ".//*[@class=' _4ssp']",
