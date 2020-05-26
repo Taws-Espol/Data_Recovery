@@ -20,11 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9dfb94be-4f7a-45d1-b3c1-c6bbeb67272c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/consultas/static/consultas/StyleInfo.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultas/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultas/static/archivos/Facebook_Publicaciones.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/static/archivos/Facebook_Publicaciones.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultas/static/archivos/Instagram.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/static/archivos/Instagram.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consultas/templates/consultas/informacion.html" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/templates/consultas/informacion.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/funciones/FacebookBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/funciones/FacebookBot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,13 +153,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="442" y="167" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589571740966">
