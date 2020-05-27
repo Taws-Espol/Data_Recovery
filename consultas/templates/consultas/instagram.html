@@ -5,8 +5,13 @@
     <link rel="stylesheet" href="{% static 'consultas/StyleTer.css' %}">
 {% endblock content1 %}
 {% block content2 %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <style>
+        .hidden { display:none; }
+    </style>
+
     <section id="showcase">
-        <form method="POST">
+        <form method="POST" id="formulario-instagram">
             {% csrf_token %}
             <h1>Página a consultar</h1>
             {{ form|crispy }}
@@ -14,5 +19,18 @@
                 <button class="btn btn-outline-info" type="submit">Iniciar Scrapper</button>
             </div>
         </form>
+        <div id="cargando-instagram" class="success-msg hidden">
+            <h3>Descarga en progreso...</h3>
+            <img src="{% static 'consultas/ajax-loader.gif' %}" alt="loading"/>
+        </div>
     </section>
+
+    <script>
+        $("#formulario-instagram").on("submit", function(e){
+            var $this = $(this);
+            if(this.checkValidity()) {
+                $(".success-msg", "#showcase").removeClass("hidden")
+            }
+        });
+    </script>
 {% endblock content2 %}}

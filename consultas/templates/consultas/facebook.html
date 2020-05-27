@@ -5,9 +5,14 @@
     <link rel="stylesheet" href="{% static 'consultas/StylerCuar.css' %}">
 {% endblock content1 %}
 {% block content2 %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <style>
+        .hidden { display:none; }
+    </style>
+
     <div class="options">
         <div class="publicacion">
-            <form method="POST">
+            <form method="POST" id="formulario-publicaciones">
                 {% csrf_token %}
                 <h3>Obtener publicaciones</h3>
                 {{ form_pu|crispy }}
@@ -15,9 +20,14 @@
                     <button class="btn btn-outline-info" type="submit">Iniciar Scrapper</button>
                 </div>
             </form>
+            <div id="cargando-publicaciones" class="success-msg hidden">
+                <h3>Descarga en progreso...</h3>
+                <img src="{% static 'consultas/ajax-loader.gif' %}" alt="loading"/>
+            </div>
         </div>
+
         <div class="comentarios">
-            <form method="POST">
+            <form method="POST" id="formulario-comentarios">
                 {% csrf_token %}
                 <h3>Obtener comentarios</h3>
                 {{ form_co|crispy }}
@@ -25,6 +35,29 @@
                     <button class="btn btn-outline-info" type="submit">Iniciar Scrapper</button>
                 </div>
             </form>
+            <div id="cargando-comentarios" class="success-msg hidden">
+                <h3>Descarga en progreso...</h3>
+                <img src="{% static 'consultas/ajax-loader.gif' %}" alt="loading"/>
+            </div>
         </div>
     </div>
+
+    <script>
+        $("#formulario-publicaciones").on("submit", function(e){
+            var $this = $(this);
+            if(this.checkValidity()) {
+                $(".success-msg", ".publicacion").removeClass("hidden")
+            }
+        });
+    </script>
+
+    <script>
+        $("#formulario-comentarios").on("submit", function(e){
+            var $this = $(this);
+            if(this.checkValidity()) {
+                $(".success-msg", ".comentarios").removeClass("hidden")
+            }
+        });
+    </script>
+
 {% endblock content2 %}
