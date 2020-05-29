@@ -12,7 +12,7 @@
 
     <div class="options">
         <div class="publicacion">
-            <form method="POST" id="formulario-publicaciones">
+            <form method="POST" id="formulario-publicaciones" class="grupo">
                 {% csrf_token %}
                 <h3>Obtener publicaciones</h3>
                 {{ form_pu|crispy }}
@@ -27,11 +27,11 @@
         </div>
 
         <div class="comentarios">
-            <form method="POST" id="formulario-comentarios">
+            <form method="POST" id="formulario-comentarios" class="grupo">
                 {% csrf_token %}
                 <h3>Obtener comentarios</h3>
                 {{ form_co|crispy }}
-                <div class="form-group">
+                <div id="boton" class="form-group">
                     <button class="btn btn-outline-info" type="submit">Iniciar Scrapper</button>
                 </div>
             </form>
@@ -46,6 +46,7 @@
         $("#formulario-publicaciones").on("submit", function(e){
             var $this = $(this);
             if(this.checkValidity()) {
+                $(".grupo", ".publicacion").addClass("hidden")
                 $(".success-msg", ".publicacion").removeClass("hidden")
             }
         });
@@ -55,6 +56,7 @@
         $("#formulario-comentarios").on("submit", function(e){
             var $this = $(this);
             if(this.checkValidity()) {
+                $(".grupo", ".comentarios").addClass("hidden")
                 $(".success-msg", ".comentarios").removeClass("hidden")
             }
         });

@@ -50,6 +50,7 @@
 }
 
 .publicacion{
+    align-items: center;
     margin: 30px 30px;
 }
 
@@ -57,3 +58,7 @@
     margin: 30px 30px;
 }
 
+.success-msg hidden img{
+    margin-left: 130px;
+    padding-left: 150px;
+}

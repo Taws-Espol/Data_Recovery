@@ -51,7 +51,7 @@
     height: 80%;
     background: rgba(255,255,255,0.7);
     margin: 80px auto;
-    color: #5D1EAD;
+    color: #6E6E6E;
     align-items: center;
     font-size: 40px;
     font-weight: bold;
@@ -76,6 +76,7 @@
     font-family: 'Domine', serif;
     margin: 20px auto;
     font-weight: bold;
+    color: #000000;
 }
 
 .form-group{

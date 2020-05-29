@@ -11,7 +11,7 @@
     </style>
 
     <section id="showcase">
-        <form method="POST" id="formulario-instagram">
+        <form method="POST" id="formulario-instagram" class="grupo">
             {% csrf_token %}
             <h1>Página a consultar</h1>
             {{ form|crispy }}
@@ -29,6 +29,7 @@
         $("#formulario-instagram").on("submit", function(e){
             var $this = $(this);
             if(this.checkValidity()) {
+                $(".grupo", "#showcase").addClass("hidden")
                 $(".success-msg", "#showcase").removeClass("hidden")
             }
         });
