@@ -20,16 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9dfb94be-4f7a-45d1-b3c1-c6bbeb67272c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/consultas/static/consultas/StyleCont.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultas/static/archivos/Instagram.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/static/archivos/Instagram.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultas/static/consultas/StyleBase.css" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/static/consultas/StyleBase.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultas/static/consultas/StyleTer.css" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/static/consultas/StyleTer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultas/static/consultas/StylerCuar.css" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/static/consultas/StylerCuar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultas/templates/consultas/contactos.html" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/templates/consultas/contactos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultas/templates/consultas/facebook.html" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/templates/consultas/facebook.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consultas/templates/consultas/instagram.html" beforeDir="false" afterPath="$PROJECT_DIR$/consultas/templates/consultas/instagram.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/funciones/FacebookBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/funciones/FacebookBot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
