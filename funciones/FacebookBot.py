@@ -111,13 +111,13 @@ def imprimir_publicaciones(pagina, cantidad_publicaciones):
                 escribir_diferente = str(Diferente).replace("\t", "").replace("\n", "")
                 listaReaccionesParaEscribir.append(escribir_diferente)
 
-            f.write(verificarReaccion(listaReaccionesParaEscribir, "Me gusta")+"\t")
-            f.write(verificarReaccion(listaReaccionesParaEscribir, "Me encanta") + "\t")
-            f.write(verificarReaccion(listaReaccionesParaEscribir, "Me importa") + "\t")
-            f.write(verificarReaccion(listaReaccionesParaEscribir, "Me divierte") + "\t")
-            f.write(verificarReaccion(listaReaccionesParaEscribir, "Me asombra") + "\t")
-            f.write(verificarReaccion(listaReaccionesParaEscribir, "Me entristece") + "\t")
-            f.write(verificarReaccion(listaReaccionesParaEscribir, "Me enoja") + "\t")
+            f.write(verificarReaccion(listaReaccionesParaEscribir, "Me gusta").split(" ")[0] + "\t")
+            f.write(verificarReaccion(listaReaccionesParaEscribir, "Me encanta").split(" ")[0] + "\t")
+            f.write(verificarReaccion(listaReaccionesParaEscribir, "Me importa").split(" ")[0] + "\t")
+            f.write(verificarReaccion(listaReaccionesParaEscribir, "Me divierte").split(" ")[0] + "\t")
+            f.write(verificarReaccion(listaReaccionesParaEscribir, "Me asombra").split(" ")[0] + "\t")
+            f.write(verificarReaccion(listaReaccionesParaEscribir, "Me entristece").split(" ")[0] + "\t")
+            f.write(verificarReaccion(listaReaccionesParaEscribir, "Me enoja").split(" ")[0] + "\t")
 
             cerrar=driver.find_element(By.XPATH,Dicc_xpaths["boton_cerrar_reacciones"])
             cerrar.click()
@@ -134,9 +134,9 @@ def imprimir_publicaciones(pagina, cantidad_publicaciones):
         if(verificarElemento(Dicc_xpaths["cantidad_comentarios"],publicacion)):
             cantidadComentarios=publicacion.find_element(By.XPATH,Dicc_xpaths["cantidad_comentarios"])
             escribir_cantidad_comentarios=str(cantidadComentarios.text).replace("\t","").replace("\n","")
-            f.write(escribir_cantidad_comentarios + "\n")
+            f.write(escribir_cantidad_comentarios.split(" ")[0] + "\n")
         else:
-            f.write("0 comentarios"+ "\n")
+            f.write("0" + "\n")
 
     f.close()
 
