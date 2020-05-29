@@ -5,26 +5,25 @@
 {% endblock content1 %}
 {% block content2 %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<div style="text-align:center" class="encabezado">
-  <h2>Contactanos</h2>
-  <p>Dejanos saber tus inquietudes y sugerencias:</p>
-</div>
-<div class="row">
-  <div class="column">
-    <img src="{% static 'consultas/large_thumbnail.jpg' %}" alt="">
+<section class="formulario">
+  <div style="text-align:center" class="encabezado">
+    <h2>Contactanos</h2>
+    <p>Dejanos saber tus inquietudes y sugerencias:</p>
   </div>
+
   <div class="column">
     <form action="/action_page.php" class="etiquetas">
       <label for="fname" >Nombre</label>
-      <input type="text" id="fname" name="firstname" placeholder="Tu nombre..">
-      <label for="lname">Apellido</label>
-      <input type="text" id="lname" name="lastname" placeholder="Tu apellido..">
+      <input type="text" id="fname" name="firstname" placeholder="Ej: Jonathan Layedra">
+      <label for="lname">Correo Electrónico</label>
+      <input type="text" id="lname" name="lastname" placeholder="Ej: aaaaa@outlook.com">
       <label for="subject">Mensaje</label>
       <textarea id="subject" name="subject" placeholder="Escribe tu mensaje.." style="height:170px"></textarea>
       <input type="submit" value="Submit">
     </form>
   </div>
-</div>
+</section>
+
 
 
 {% endblock content2 %}
