@@ -3,6 +3,7 @@
   "email": ".//*[@name='username']",
   "password": ".//*[@name='password']",
   "boton_iniciar": ".//*[@class='sqdOP  L3NKy   y3zKF     ']",
+  "ahora_no": ".//*[@class='cmbtv']",
   "publicaciones_lista": ".//*[@class='v1Nh3 kIKUG  _bz0w']",
   "entrar_primera_publicacion": ".//*[@class='_9AhH0']",
   "usuario_publicacion": ".//*[@class='e1e1d']/a",

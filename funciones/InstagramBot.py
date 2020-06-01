@@ -5,8 +5,8 @@ import time
 import json
 
 lugar="driver/chromedriver"
-email='jgparraga99@gmail.com'
-contraseña='probando12345'
+email=''
+contraseña=''
 
 def leer_json():
     with open("xpaths_instagram.json") as mi_archivo:
@@ -41,6 +41,11 @@ def imprimir_informacion(url_ubicacion, cantidadDePublicaciones):
     sesion=driver.find_element(By.XPATH, Dicc_xpaths["boton_iniciar"])
     sesion.click()
     time.sleep(10)
+
+    if(verificarElemento(Dicc_xpaths["ahora_no"],driver)):
+        ahora_no=driver.find_element(By.XPATH,Dicc_xpaths["ahora_no"])
+        ahora_no.click()
+        time.sleep(10)
 
     listaPublicaciones=driver.find_elements(By.XPATH, Dicc_xpaths["publicaciones_lista"])
     publicacionInicial=listaPublicaciones[0]
